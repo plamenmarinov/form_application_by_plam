@@ -1,0 +1,66 @@
+<TextInput>:
+    font_size: self.height-(self.height*0.4)
+<Label>:
+    font_size: self.height-(self.height*0.4)
+
+<Form>:
+    orientation: 'vertical'
+    size: root.width, root.height
+    padding: 10,10
+    f_firstname: firstname
+    f_lastname: lastname
+    f_email: email
+    f_phone: phone
+    f_birthdate: birthdate
+    f_password: password
+    f_password_confirm: password_confirm
+    l_status: status
+    Label:
+        text: "Personal Name"
+        bold: True
+    TextInput:
+        id: firstname
+        multiline: False
+    Label:
+        text: "Family Name"
+        bold: True
+    TextInput:
+        id: lastname
+        multiline: False
+    Label:
+        text: "E-mail address"
+        bold: True
+    TextInput:
+        id: email
+        multiline: False
+    Label:
+        text: "Phone number"
+        bold: True
+    TextInput:
+        id: phone
+        multiline: False
+    Label:
+        text: "Birthdate"
+        bold: True
+    TextInput:
+        id: birthdate
+        multiline: False
+    Label:
+        text: "Password"
+        bold: True
+    TextInput:
+        id: password
+        multiline: False
+    Label:
+        text: "Password Confirmation"
+        bold: True
+    TextInput:
+        id: password_confirm
+        multiline: False
+
+    Button:
+        text: "Send"
+        background_color: 0, 1, 0
+        on_press: self.parent.submit()
+    Label:
+        id: status
